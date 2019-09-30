@@ -26,6 +26,13 @@ productWhichMadeMostMoney returns an object with an id for that product and a to
 
 //write the productWhichMadeMostMoney function
 
-function bestSales(sales) {}
+function bestSales(sales) {
+  let calculatedsales={};
+  sales.forEach(function productWhichMadeMostMoney(sales){
+    for
+    calculatedsales.push
+  })
+
+}
 
 module.exports = { bestSales, sales };
