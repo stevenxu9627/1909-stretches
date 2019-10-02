@@ -17,7 +17,8 @@ returns { a: 1, c: 42};
 */
 
 function pluck(obj, elements) {
-
+  const newobj={};
+  elements.forEach(el =>)
 }
 
 module.exports = { pluck };
