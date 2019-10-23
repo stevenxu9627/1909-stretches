@@ -7,10 +7,25 @@ class DiceRoller {
   constructor(sides,numDice){
     this.sides = sides;
     this.numDice = numDice;
+    this.history =[];
+    if (!sides || !numDice){
+      throw 'Need 2 parameters';
+    }
     if(typeof sides !== 'number' || typeof numDice !== 'number' || sides >6 || sides<0){
-      throw 'Error';
+      throw 'Must be valid';
     }
   }
+  roll () {
+    const allRolls = [];
+    for(const  _ of Array(this.numDice)){
+      const randomNum = Math.floor(Math.random()*this.sides +1);
+      allRolls.push(randomNum);
+    }
+    this.history.push(allRolls);
+    return allRolls;
+  }
 }
+
+
 
 module.exports = { DiceRoller };
