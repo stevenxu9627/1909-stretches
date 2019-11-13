@@ -11,7 +11,7 @@ describe('multiply testing', () => {
 
   test('it returns the product of two numbers', () => {
     // test the type of the returned value
-    expect(multiply(2,1)).toBe(2);
+    expect(typeof multiply(2,1)).toBe('number');
 
     // test that the returned value is correct
     expect(multiply(0,1)).toBe(0);
@@ -24,6 +24,6 @@ describe('multiply testing', () => {
     // test some random values
     const num1 = Math.floor(Math.random()*11);
     const num2 = Math.floor(Math.random()*11);
-    expect(multiply(num1, num2)).tobe(2);
+    expect(multiply(num1, num2)).tobe(num1*num2);
   });
 });
