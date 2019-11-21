@@ -6,10 +6,14 @@ class StatefulThing {
   constructor(initialState = {}) {
     this.state = initialState;
   }
-  setState() {
-    this.setState({
-      initialState: initialState.setState();
-    })
+  setState(incomingState) {
+    // this.state = { ...this.state, ...incomingState };
+    this.prevState.push(this.state);
+    this.state = Object.assign({}, this.state, incomingState)
+    return this.state;
+  }
+  goBack() {
+    this.state = this.preStates.pop();
   }
 }
 
